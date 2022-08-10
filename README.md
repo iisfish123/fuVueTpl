@@ -16,29 +16,21 @@ Since TypeScript cannot handle type information for `.vue` imports, they are shi
 You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
 
 
-建议安装nvm
-
+## 建议安装nvm
 node -v
 v16.15.1
-
-TodoList: 
-i18n  ✅
-Pinia  ❌
-Auto-Import ✅
-Axios或者Fetch的封装  ❌
-TypeScript  ✅
-Eslint  ✅
-proxy接口代理  ❌
-vite  ✅
-
-### @types/node 作用是引入node的类型，如果不引入 那么在./vite.config.ts的 import path from 'path'都划红线报错
-
-### ./tsconfig "types": ["@intlify/vite-plugin-vue-i18n/client"] 原因是./src/main.ts里面，import messages from '@intlify/vite-plugin-vue-i18n/messages'
-
-### npm init @eslint/config
-
-### auto-imports.d.ts 和 components.d.ts是npm run dev自动生成
-
-### ./vite.config.ts 下AutoImport的设置.eslintrc选项 + ./tsconfig.json下的"./auto-imports.d.ts" 可以让sfc组件内部的hooks eslint和ts都不报红
+## QuickStart：
+- npm install
+- npm run dev
 
 
+
+## TodoList: 
+- i18n  ✅
+- Pinia  ❌
+- Auto-Import ✅
+- Axios或者Fetch的封装  ❌
+- TypeScript  ✅
+- Eslint  ✅
+- proxy接口代理  ❌
+- vite  ✅
