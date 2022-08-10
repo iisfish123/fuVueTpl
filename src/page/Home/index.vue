@@ -6,7 +6,7 @@ const { t } = useI18n()
 </script>
 
 <template>
-  Home Page
+  Home Page3
   {{t('hello')}}
 </template>
 <style scoped>
