@@ -27,10 +27,12 @@ v16.15.1
 
 ## TodoList: 
 - i18n  ✅
-- Pinia  ❌
+- Pinia  ✅
 - Auto-Import ✅
 - Axios或者Fetch的封装  ❌
-- TypeScript  ✅
+- TypeScript  ✅  
 - Eslint  ✅
 - proxy接口代理  ❌
 - vite  ✅
+- less / sass  ❌
+- 解决resolve.alias的问题，@路径 ts一直报错

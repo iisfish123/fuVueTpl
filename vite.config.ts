@@ -5,7 +5,6 @@ import { vueI18n } from '@intlify/vite-plugin-vue-i18n'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
-import vueSetupExtend from 'vite-plugin-vue-setup-extend'
 import eslintPlugin from 'vite-plugin-eslint'
 
 function resolve (dir: string) {
@@ -14,16 +13,14 @@ function resolve (dir: string) {
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    // vueSetupExtend(),
     vueI18n({
       // if you want to use Vue I18n Legacy API, you need to set `compositionOnly: false`
       // you need to set i18n resource including paths !
       include: resolve('./src/i18n/**')
     }),
     AutoImport({
-      imports: ['vue', 'vue-router', 'vue-i18n', '@vueuse/core'],
+      imports: ['vue', 'vue-router', 'vue-i18n', '@vueuse/core', 'pinia'],
       resolvers: [
-        ElementPlusResolver()
       ],
       dirs: [
         // './composables'
@@ -39,7 +36,7 @@ export default defineConfig({
     Components({
       extensions: ['vue', 'tsx'],
       resolvers: [
-        ElementPlusResolver()
+        ElementPlusResolver() // 如果有安装element-plus
       ],
       dts: resolve('./components.d.ts')
     }),

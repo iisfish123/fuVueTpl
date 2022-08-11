@@ -14,8 +14,13 @@
     "skipLibCheck": true,
     "types": [
       "@intlify/vite-plugin-vue-i18n/client"
-    ]
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*":["src/*"]
+    }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "./auto-imports.d.ts"],
+  "exclude": ["node_modules", "dist"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
